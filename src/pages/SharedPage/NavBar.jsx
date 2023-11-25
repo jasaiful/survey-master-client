@@ -20,7 +20,8 @@ const NavBar = () => {
     const navLinks = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/menu">Surveys</Link></li>
-        <li><Link to="/order/salad">Price</Link></li>
+        <li><Link to="/price">Price</Link></li>
+        <li><Link to="/register">Register</Link></li>
         {/* {
             // user ? 'true' : 'false'
             // user ? condition ? 'double true' : 'one true' : 'false'
