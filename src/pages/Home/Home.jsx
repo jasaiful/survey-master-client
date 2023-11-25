@@ -1,4 +1,10 @@
 import { Helmet } from "react-helmet-async";
+import Hero from "./Hero";
+import FeaturedSurveys from "./FeaturedSurveys";
+import LatestSurveys from "./LatestSurveys";
+import HowItWorks from "./HowItWorks";
+import Testimonials from "./Testimonials";
+import FAQ from "./FAQ";
 
 
 const Home = () => {
@@ -7,7 +13,12 @@ const Home = () => {
             <Helmet>
                 <title>SurveyMaster | Home</title>
             </Helmet>
-            <h2>This is Home</h2>
+            <Hero></Hero>
+            <FeaturedSurveys></FeaturedSurveys>
+            <LatestSurveys></LatestSurveys>
+            <HowItWorks></HowItWorks>
+            <Testimonials></Testimonials>
+            <FAQ></FAQ>
         </div>
     );
 };

@@ -1,0 +1,37 @@
+[
+    {
+        "_id": "60b9cfb5950a2317a43d98a1",
+        "name": "Alice Johnson",
+        "avatar": "https://i.ibb.co/Cbgg4dP/image.png",
+        "testimonial": "SurveyMaster Pro is fantastic! It simplified our survey processes immensely.",
+        "rating": 5
+    },
+    {
+        "_id": "60b9cfb5950a2317a43d98a2",
+        "name": "John Smith",
+        "avatar": "https://i.ibb.co/Cbgg4dP/image.png",
+        "testimonial": "Great platform! Easy to use and the analytics are very insightful.",
+        "rating": 4
+    },
+    {
+        "_id": "60b9cfb5950a2317a43d98a3",
+        "name": "Emily Davis",
+        "avatar": "https://i.ibb.co/Cbgg4dP/image.png",
+        "testimonial": "SurveyMaster Pro exceeded our expectations. Highly recommended.",
+        "rating": 5
+    },
+    {
+        "_id": "60b9cfb5950a2317a43d98a4",
+        "name": "Michael Clark",
+        "avatar": "https://i.ibb.co/Cbgg4dP/image.png",
+        "testimonial": "Good platform for surveys. User-friendly interface and good customer support.",
+        "rating": 4
+    },
+    {
+        "_id": "60b9cfb5950a2317a43d98a5",
+        "name": "Sophia Wilson",
+        "avatar": "https://i.ibb.co/Cbgg4dP/image.png",
+        "testimonial": "Impressive tool! Loved the customization options and reporting features.",
+        "rating": 5
+    }
+]
