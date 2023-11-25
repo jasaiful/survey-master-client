@@ -75,7 +75,7 @@ const SignUP = () => {
                         <form onSubmit={handleSubmit(onSubmit)} className="px-5">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text">Name *</span>
                                 </label>
                                 <input
                                     type="text"
@@ -88,7 +88,7 @@ const SignUP = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Photo URL</span>
+                                    <span className="label-text">Photo URL *</span>
                                 </label>
                                 <input
                                     type="text"
@@ -100,7 +100,7 @@ const SignUP = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text">Email *</span>
                                 </label>
                                 <input
                                     type="email"
@@ -113,7 +113,7 @@ const SignUP = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text">Password *</span>
                                 </label>
                                 <input
                                     type="password"
@@ -136,19 +136,16 @@ const SignUP = () => {
 
                                 {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one uppercase, one lowercase, one number & one special character</p>}
 
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
                             </div>
 
                             <div className="form-control mt-6">
                                 <input className="btn btn-secondary" type="submit" value="Sign up" />
                             </div>
                         </form>
-                        <p className='text-center px-6 pb-5'>
-                            <small>Already have an account? <Link to={"/login"}>Login</Link> </small>
+                        <p className='text-center px-6 py-3'>
+                            <small>Already have an account? <Link className="font-bold" to={"/login"}>Login</Link> </small>
                         </p>
-                        <div className="py-5 mx-auto">
+                        <div className="pb-5 mx-auto">
                             <SocialLogin></SocialLogin>
                         </div>
                     </div>

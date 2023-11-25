@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 // import { useContext } from "react";
 // import { AuthContext } from "../../../provider/AuthProvider";
 // import { FaShoppingCart } from 'react-icons/fa';
@@ -7,15 +9,15 @@ import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
-    // const { user, userSignOut } = useContext(AuthContext);
+    const { user, userSignOut } = useContext(AuthContext);
     // const [isAdmin] = useAdmin();
     // const [cart] = useCart();
 
-    // const handleLogOut = () => {
-    //     userSignOut()
-    //         .then(() => { })
-    //         .catch(error => console.log(error));
-    // }
+    const handleLogOut = () => {
+        userSignOut()
+            .then(() => { })
+            .catch(error => console.log(error));
+    }
 
     const navLinks = <>
         <li><Link to="/">Home</Link></li>
@@ -77,7 +79,16 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user ?
+                            <button onClick={handleLogOut}>
+                                <p className="text-white"> <span className="font-bold">Logged In:</span> {user?.email}</p>
+                                <span className="btn btn-sm text-white btn-outline">Logout</span>
+                            </button>
+                            : <Link to='/login'>
+                                <button className="btn text-white btn-sm btn-outline"> Login </button>
+                            </Link>
+                    }
                 </div>
             </div>
         </>

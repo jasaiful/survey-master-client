@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
+import SocialLogin from "../../components/SocialLogin";
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-import { AuthContext } from '../../provider/AuthProvider';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import Swal from 'sweetalert2';
-import SocialLogin from '../../components/SocialLogin';
 
 const Login = () => {
 
@@ -68,16 +68,16 @@ const Login = () => {
                 <title>Bistro | Login</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center md:w-1/2 lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <div className="hero-content flex-col my-20 md:gap-20 lg:flex-row">
+                    <div className="text-center">
+                        <h1 className="text-4xl py-5 font-bold">Login now! </h1>
+                        <img className="rounded-xl" src="https://i.ibb.co/vVN4cMV/image.png" alt="image" />
                     </div>
                     <div className="card w-full md:w-1/2 max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleLogin} className="card-body">
+                        <form onSubmit={handleLogin} className="px-5">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text">Email *</span>
                                 </label>
                                 <input
                                     type="email"
@@ -88,7 +88,7 @@ const Login = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text">Password *</span>
                                 </label>
                                 <input
                                     type="password"
@@ -111,16 +111,17 @@ const Login = () => {
                                     placeholder="type the above captcha here"
                                     className="input input-bordered"
                                     required />
-                                {/* <button className="btn btn-outline btn-xs mt-2">Validate</button> */}
                             </div>
                             <div className="form-control mt-6">
                                 <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
-                        <p className='text-center px-6 pb-5'>
-                            <small>New Here? <Link to={"/signUp"}>Create an account</Link> </small>
+                        <p className='text-center px-6 py-3'>
+                            <small>New Here? <Link className="font-bold" to={"/register"}>Register</Link> </small>
                         </p>
-                        <SocialLogin></SocialLogin>
+                        <div className="pb-5 mx-auto">
+                            <SocialLogin></SocialLogin>
+                        </div>
                     </div>
                 </div>
             </div>
