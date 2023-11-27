@@ -49,7 +49,7 @@ const SignUP = () => {
                                         showConfirmButton: false,
                                         timer: 1500
                                     });
-                                    navigate('/'); //navigate to home page
+                                    navigate('/dashboard/userHome'); //navigate to home page
                                 }
                             })
                     })

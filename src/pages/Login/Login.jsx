@@ -49,6 +49,7 @@ const Login = () => {
                     }
                 });
                 navigate(from, { replace: true });
+                navigate('/dashboard')
             })
     }
 
