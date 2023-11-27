@@ -4,6 +4,7 @@ import Footer from "../pages/SharedPage/Footer";
 
 
 const MainLayout = () => {
+    
     return (
         <div>
             <NavBar></NavBar>

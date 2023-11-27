@@ -1,17 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-// import { useContext } from "react";
-// import { AuthContext } from "../../../provider/AuthProvider";
-// import { FaShoppingCart } from 'react-icons/fa';
-// import useCart from "../../../hooks/useCart";
-// import useAdmin from "../../../hooks/useAdmin";
+import useAdmin from "../../hooks/useAdmin";
 
 
 const NavBar = () => {
     const { user, userSignOut } = useContext(AuthContext);
-    // const [isAdmin] = useAdmin();
-    // const [cart] = useCart();
+    const [isAdmin] = useAdmin();
 
     const handleLogOut = () => {
         userSignOut()
@@ -21,39 +16,14 @@ const NavBar = () => {
 
     const navLinks = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/menu">Surveys</Link></li>
-        <li><Link to="/price">Price</Link></li>
+        <li><Link to="/surveys">Surveys</Link></li>
+        <li><Link to="/prices">Prices</Link></li>
         <li><Link to="/register">Register</Link></li>
-        {/* {
-            // user ? 'true' : 'false'
-            // user ? condition ? 'double true' : 'one true' : 'false'
-        }
         {
             user && isAdmin && <li><Link to="/dashboard/adminHome">Dashboard</Link></li>
         }
         {
             user && !isAdmin && <li><Link to="/dashboard/userHome">Dashboard</Link></li>
-        } */}
-
-        {/* <li>
-            <Link to="/dashboard/cart">
-                <button className="btn">
-                    <FaShoppingCart className="mr-2"></FaShoppingCart>
-                    <div className="badge badge-secondary">+{cart.length}</div>
-                </button>
-            </Link>
-        </li> */}
-
-        {
-            // user ?
-            //     <>
-            //         {/* <span> { user?.displayName } </span> */}
-            //         <Link onClick={handleLogOut} className="btn btn-ghost btn-sm">Log Out</Link>
-            //     </>
-            //     :
-            //     <>
-            //         <li><Link to="/login">Login</Link></li>
-            //     </>
         }
 
     </>

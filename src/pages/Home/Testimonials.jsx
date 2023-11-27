@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -7,16 +7,21 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const Testimonials = () => {
+    const axiosPublic = useAxiosPublic();
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('testimonials.json')
-            .then(res => res.json())
-            .then(data => setReviews(data))
-    }, [])
+        axiosPublic.get('/reviews')
+            .then(res => {
+                setReviews(res.data);
+            })
+            .catch(error => {
+                console.error('Error Fetching Reviews', error);
+            })
+    }, [axiosPublic]);
 
     return (
         <div className="p-8">

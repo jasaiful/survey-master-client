@@ -65,7 +65,7 @@ const Login = () => {
     return (
         <>
             <Helmet>
-                <title>Bistro | Login</title>
+                <title>SurveyMaster | Login</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col my-20 md:gap-20 lg:flex-row">
