@@ -3,7 +3,6 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
 
-
 const AllUsers = () => {
     const axiosSecure = useAxiosSecure();
     const { data: users = [], refetch } = useQuery({

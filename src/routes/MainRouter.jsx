@@ -12,6 +12,7 @@ import UserHome from '../pages/Dashboard/Users/UserHome';
 import AdminHome from '../pages/Dashboard/Admins/AdminHome';
 import AdminRoute from '../routes/AdminRoute';
 import AllUsers from '../pages/Dashboard/Admins/AllUsers';
+import SurveyDetails from "../pages/SurveyDetails/SurveyDetails";
 
 
 const MainRouter = createBrowserRouter([
@@ -33,14 +34,17 @@ const MainRouter = createBrowserRouter([
                 path: "/login",
                 element: <Login></Login>
             },
-
             {
                 path: "/surveys",
                 element: <Surveys></Surveys>
             },
             {
+                path: "/surveyDetails",
+                element: <SurveyDetails></SurveyDetails>
+            },
+            {
                 path: "/prices",
-                element: <Prices></Prices>
+                element: <PrivateRoute><Prices></Prices></PrivateRoute>
             }
         ]
     },

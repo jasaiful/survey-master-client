@@ -1,0 +1,72 @@
+[
+    {
+      "_id": "1",
+      "title": "Facebook Survey",
+      "category": "Social Media",
+      "description": "Survey about Facebook usage",
+      "options": [
+        { "optionText": "Yes" },
+        { "optionText": "No" }
+      ],
+      "likes": 20,
+      "dislikes": 5,
+      "totalVoted": 25,
+      "timestamp": "2023-11-25T12:00:00Z"
+    },
+    {
+      "_id": "2",
+      "title": "Instagram Survey",
+      "category": "Social Media",
+      "description": "Survey about Instagram usage",
+      "options": [
+        { "optionText": "Yes" },
+        { "optionText": "No" }
+      ],
+      "likes": 15,
+      "dislikes": 3,
+      "totalVoted": 18,
+      "timestamp": "2023-11-24T15:30:00Z"
+    },
+    {
+      "_id": "3",
+      "title": "LinkedIn Survey",
+      "category": "Social Media",
+      "description": "Survey about LinkedIn usage",
+      "options": [
+        { "optionText": "Yes" },
+        { "optionText": "No" }
+      ],
+      "likes": 18,
+      "dislikes": 7,
+      "totalVoted": 25,
+      "timestamp": "2023-11-23T09:45:00Z"
+    },
+    {
+      "_id": "4",
+      "title": "YouTube Survey",
+      "category": "Social Media",
+      "description": "Survey about YouTube usage",
+      "options": [
+        { "optionText": "Yes" },
+        { "optionText": "No" }
+      ],
+      "likes": 30,
+      "dislikes": 10,
+      "totalVoted": 40,
+      "timestamp": "2023-11-22T18:20:00Z"
+    },
+    {
+      "_id": "5",
+      "title": "JavaScript Survey",
+      "category": "Programming Languages",
+      "description": "Survey about JavaScript",
+      "options": [
+        { "optionText": "Yes" },
+        { "optionText": "No" }
+      ],
+      "likes": 25,
+      "dislikes": 8,
+      "totalVoted": 33,
+      "timestamp": "2023-11-21T11:10:00Z"
+    }
+  ]
