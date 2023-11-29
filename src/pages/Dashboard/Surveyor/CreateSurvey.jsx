@@ -73,16 +73,11 @@ const CreateSurvey = () => {
                             <option disabled value="default">
                                 Select a Category
                             </option>
-                            <option value="Food Preferences">Food Preferences</option>
-                            <option value="Fitness Habits">Fitness Habits</option>
+                            <option value="Customer Satisfaction">Customer Satisfaction</option>
+                            <option value="Health & Wellness">Health & Wellness</option>
                             <option value="Career Development">Career Development</option>
-                            <option value="Electronics Usage">Electronics Usage</option>
-                            <option value="Travel Preferences">Travel Preferences</option>
-                            <option value="Sustainability">Sustainability</option>
-                            <option value="Entertainment">Entertainment</option>
-                            <option value="Learning Preferences">Learning Preferences</option>
-                            <option value="Fashion Trends">Fashion Trends</option>
-                            <option value="Community Engagement">Community Engagement</option>
+                            <option value="Education & Training">Education & Training</option>
+                            <option value="Social Media">Social Media</option>
 
                         </select>
                     </div>

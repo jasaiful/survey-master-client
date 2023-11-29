@@ -10,13 +10,16 @@ const FeaturedSurveys = () => {
         const fetchSurveys = async () => {
             try {
                 const response = await axiosPublic.get('/surveys');
-                setSurveysData(response.data);
+                const sortedSurveys = response.data.sort((a, b) => b.totalVoted - a.totalVoted);
+                const topSixSurveys = sortedSurveys.slice(0, 6);
+                setSurveysData(topSixSurveys);
             } catch (error) {
                 console.error('Error fetching surveys:', error);
             }
         };
         fetchSurveys();
     }, [axiosPublic]);
+
     return (
         <div>
             <SectionTitle heading={"Featured Surveys"} subHeading={"we committed for real survey"}>

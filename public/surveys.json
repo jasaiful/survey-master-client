@@ -1,72 +1,294 @@
 [
-    {
-      "_id": "1",
-      "title": "Facebook Survey",
-      "category": "Social Media",
-      "description": "Survey about Facebook usage",
-      "options": [
-        { "optionText": "Yes" },
-        { "optionText": "No" }
-      ],
-      "likes": 20,
-      "dislikes": 5,
-      "totalVoted": 25,
-      "timestamp": "2023-11-25T12:00:00Z"
-    },
-    {
-      "_id": "2",
-      "title": "Instagram Survey",
-      "category": "Social Media",
-      "description": "Survey about Instagram usage",
-      "options": [
-        { "optionText": "Yes" },
-        { "optionText": "No" }
-      ],
-      "likes": 15,
-      "dislikes": 3,
-      "totalVoted": 18,
-      "timestamp": "2023-11-24T15:30:00Z"
-    },
-    {
-      "_id": "3",
-      "title": "LinkedIn Survey",
-      "category": "Social Media",
-      "description": "Survey about LinkedIn usage",
-      "options": [
-        { "optionText": "Yes" },
-        { "optionText": "No" }
-      ],
-      "likes": 18,
-      "dislikes": 7,
-      "totalVoted": 25,
-      "timestamp": "2023-11-23T09:45:00Z"
-    },
-    {
-      "_id": "4",
-      "title": "YouTube Survey",
-      "category": "Social Media",
-      "description": "Survey about YouTube usage",
-      "options": [
-        { "optionText": "Yes" },
-        { "optionText": "No" }
-      ],
-      "likes": 30,
-      "dislikes": 10,
-      "totalVoted": 40,
-      "timestamp": "2023-11-22T18:20:00Z"
-    },
-    {
-      "_id": "5",
-      "title": "JavaScript Survey",
-      "category": "Programming Languages",
-      "description": "Survey about JavaScript",
-      "options": [
-        { "optionText": "Yes" },
-        { "optionText": "No" }
-      ],
-      "likes": 25,
-      "dislikes": 8,
-      "totalVoted": 33,
-      "timestamp": "2023-11-21T11:10:00Z"
-    }
-  ]
+  {
+    "title": "Facebook Survey",
+    "category": "Social Media",
+    "description": "Survey about Facebook usage",
+    "options": [
+      {
+        "optionText": "Yes"
+      },
+      {
+        "optionText": "No"
+      }
+    ],
+    "likes": 20,
+    "dislikes": 5,
+    "totalVoted": 25,
+    "timestamp": "2023-11-25T12:00:00Z"
+  },
+  {
+    "title": "Instagram Survey",
+    "category": "Social Media",
+    "description": "Survey about Instagram usage",
+    "options": [
+      {
+        "optionText": "Yes"
+      },
+      {
+        "optionText": "No"
+      }
+    ],
+    "likes": 15,
+    "dislikes": 3,
+    "totalVoted": 18,
+    "timestamp": "2023-11-24T15:30:00Z"
+  },
+  {
+    
+    "title": "LinkedIn Survey",
+    "category": "Social Media",
+    "description": "Survey about LinkedIn usage",
+    "options": [
+      {
+        "optionText": "Yes"
+      },
+      {
+        "optionText": "No"
+      }
+    ],
+    "likes": 18,
+    "dislikes": 7,
+    "totalVoted": 25,
+    "timestamp": "2023-11-23T09:45:00Z"
+  },
+  {
+    
+    "title": "YouTube Survey",
+    "category": "Social Media",
+    "description": "Survey about YouTube usage",
+    "options": [
+      {
+        "optionText": "Yes"
+      },
+      {
+        "optionText": "No"
+      }
+    ],
+    "likes": 30,
+    "dislikes": 10,
+    "totalVoted": 40,
+    "timestamp": "2023-11-22T18:20:00Z"
+  },
+  {
+    "title": "How often do you use social media?",
+    "category": "Social Media",
+    "description": "We're interested in understanding your social media usage patterns.",
+    "deadline": "2023-12-10",
+    "options": [
+      {
+        "optionText": "Frequently"
+      },
+      {
+        "optionText": "Rarely"
+      },
+      {
+        "optionText": "Never"
+      }
+    ],
+    "likes": 50,
+    "dislikes": 20,
+    "totalVoted": 70,
+    "timestamp": "2023-11-20T09:30:00Z"
+  },
+  {
+    "title": "How satisfied are you with your recent online purchase?",
+    "category": "Customer Satisfaction",
+    "description": "Your feedback helps us improve our online shopping experience.",
+    "deadline": "2023-12-08",
+    "options": [
+      {
+        "optionText": "Very Satisfied"
+      },
+      {
+        "optionText": "Satisfied"
+      },
+      {
+        "optionText": "Neutral"
+      },
+      {
+        "optionText": "Dissatisfied"
+      },
+      {
+        "optionText": "Very Dissatisfied"
+      }
+    ],
+    "likes": 40,
+    "dislikes": 15,
+    "totalVoted": 55,
+    "timestamp": "2023-11-25T14:45:00Z"
+  },
+  {
+    "title": "What skills would you like to develop further for your career growth?",
+    "category": "Career Development",
+    "description": "We aim to understand your aspirations for skill enhancement.",
+    "deadline": "2023-12-15",
+    "options": [
+      {
+        "optionText": "Technical skills"
+      },
+      {
+        "optionText": "Soft skills (communication, leadership)"
+      },
+      {
+        "optionText": "Industry-specific knowledge"
+      },
+      {
+        "optionText": "Other"
+      }
+    ],
+    "likes": 30,
+    "dislikes": 10,
+    "totalVoted": 40,
+    "timestamp": "2023-11-28T10:15:00Z"
+  },
+  {
+    "title": "How likely are you to recommend our product/service to others?",
+    "category": "Customer Satisfaction",
+    "description": "Your feedback helps us understand customer advocacy.",
+    "deadline": "2023-12-10",
+    "options": [
+      {
+        "optionText": "Very Likely"
+      },
+      {
+        "optionText": "Likely"
+      },
+      {
+        "optionText": "Neutral"
+      },
+      {
+        "optionText": "Unlikely"
+      },
+      {
+        "optionText": "Very Unlikely"
+      }
+    ],
+    "likes": 40,
+    "dislikes": 15,
+    "totalVoted": 55,
+    "timestamp": "2023-11-25T14:45:00Z"
+  },
+  {
+    "title": "On a scale of 1 to 5, how well do you manage stress in your daily life?",
+    "category": "Health & Wellness",
+    "description": "We're interested in understanding stress management practices.",
+    "deadline": "2023-12-12",
+    "options": [
+      {
+        "optionText": "1 - Poorly"
+      },
+      {
+        "optionText": "2"
+      },
+      {
+        "optionText": "3"
+      },
+      {
+        "optionText": "4"
+      },
+      {
+        "optionText": "5 - Very Well"
+      }
+    ],
+    "likes": 25,
+    "dislikes": 5,
+    "totalVoted": 30,
+    "timestamp": "2023-11-30T09:00:00Z"
+  },
+  {
+    "title": "How many hours of sleep do you typically get per night?",
+    "category": "Health & Wellness",
+    "description": "Understanding sleep patterns for overall well-being.",
+    "deadline": "2023-12-18",
+    "options": [
+      {
+        "optionText": "Less than 6 hours"
+      },
+      {
+        "optionText": "6-7 hours"
+      },
+      {
+        "optionText": "7-8 hours"
+      },
+      {
+        "optionText": "More than 8 hours"
+      }
+    ],
+    "likes": 35,
+    "dislikes": 10,
+    "totalVoted": 45,
+    "timestamp": "2023-11-29T16:30:00Z"
+  },
+  {
+    "title": "How often do you engage in physical exercise per week?",
+    "category": "Health & Wellness",
+    "description": "Gauging physical activity levels for a healthy lifestyle.",
+    "deadline": "2023-12-20",
+    "options": [
+      {
+        "optionText": "Never"
+      },
+      {
+        "optionText": "1-2 times"
+      },
+      {
+        "optionText": "3-4 times"
+      },
+      {
+        "optionText": "5 or more times"
+      }
+    ],
+    "likes": 20,
+    "dislikes": 8,
+    "totalVoted": 28,
+    "timestamp": "2023-11-27T11:45:00Z"
+  },
+  {
+    "title": "Rate your overall diet in terms of healthiness.",
+    "category": "Health & Wellness",
+    "description": "Assessing dietary habits for better health insights.",
+    "deadline": "2023-12-22",
+    "options": [
+      {
+        "optionText": "Very Unhealthy"
+      },
+      {
+        "optionText": "Unhealthy"
+      },
+      {
+        "optionText": "Neutral"
+      },
+      {
+        "optionText": "Healthy"
+      },
+      {
+        "optionText": "Very Healthy"
+      }
+    ],
+    "likes": 28,
+    "dislikes": 7,
+    "totalVoted": 35,
+    "timestamp": "2023-11-26T10:00:00Z"
+  },
+  {
+    "title": "Do you actively practice any mental health exercises (meditation, mindfulness, etc.)?",
+    "category": "Health & Wellness",
+    "description": "Exploring mental health practices for well-being.",
+    "deadline": "2023-12-25",
+    "options": [
+      {
+        "optionText": "Yes, regularly"
+      },
+      {
+        "optionText": "Occasionally"
+      },
+      {
+        "optionText": "No, never"
+      }
+    ],
+    "likes": 30,
+    "dislikes": 12,
+    "totalVoted": 42,
+    "timestamp": "2023-11-28T14:15:00Z"
+  }
+]
