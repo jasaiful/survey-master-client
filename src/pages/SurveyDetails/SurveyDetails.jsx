@@ -6,12 +6,10 @@ import "survey-creator-core/survey-creator-core.min.css";
 import 'survey-core/defaultV2.min.css';
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 
-const surveys = [
 
-]
 
 const SurveyDetails = () => {
-    const [surveysData, setSurveysData] = useState(surveys);
+    const [surveysData, setSurveysData] = useState([]);
     const axiosPublic = useAxiosPublic();
 
     useEffect(() => {
