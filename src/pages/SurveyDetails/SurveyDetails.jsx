@@ -29,11 +29,11 @@ const SurveyDetails = () => {
             <Helmet>
                 <title>SurveyMaster | Survey Details</title>
             </Helmet>
-            <SectionTitle heading={"Survey Details"} subHeading={"lets see opinion"}>
+            <SectionTitle heading={"Survey Details"}>
             </SectionTitle>
-            <div>
+            <div className="grid gap-5 mx-10 grid-cols-2">
                 {surveysData.map(survey => (
-                    <div key={survey._id} className="p-4 rounded-md shadow-md bg-white">
+                    <div key={survey._id} className="p-4 border border-r-4 border-b-4 border-pink-600 rounded-md shadow-md bg-white">
                         <h3 className="text-xl font-semibold mb-2">{survey.title}</h3>
                         <p className="text-gray-500 mb-4">{survey.category}</p>
                         <p className="mb-4">{survey.description}</p>
