@@ -1,7 +1,9 @@
-import { FaTrashAlt, FaUsers } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
+import { GrUpdate } from "react-icons/gr";
 
 const AllUsers = () => {
     const axiosSecure = useAxiosSecure();
@@ -13,16 +15,26 @@ const AllUsers = () => {
         }
     });
 
-    const handleMakeAdmin = user => {
-        axiosSecure.patch(`/users/admin/${user._id}`)
+    const [selectedRoles, setSelectedRoles] = useState({});
+
+    useEffect(() => {
+        const roles = {};
+        users.forEach(user => {
+            roles[user._id] = user.role;
+        });
+        setSelectedRoles(roles);
+    }, [users]);
+
+    const handleUpdateUser = user => {
+        const updatedRole = selectedRoles[user._id] || user.role;
+        axiosSecure.patch(`/users/admin/${user._id}`, { role: updatedRole })
             .then(res => {
-                console.log(res.data)
                 if (res.data.modifiedCount > 0) {
                     refetch();
                     Swal.fire({
                         position: "center",
                         icon: "success",
-                        title: `${user.name} is an Admin Now!`,
+                        title: `${user.name} is now ${selectedRoles[user._id]}!`,
                         showConfirmButton: false,
                         timer: 1500
                     });
@@ -56,6 +68,9 @@ const AllUsers = () => {
         });
     };
 
+    const handleRoleChange = (userId, role) => {
+        setSelectedRoles({ ...selectedRoles, [userId]: role });
+    };
 
     return (
         <div>
@@ -66,7 +81,7 @@ const AllUsers = () => {
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
                     {/* head */}
-                    <thead>
+                    <thead className="bg-pink-400 text-white font-bold text-lg">
                         <tr>
                             <th></th>
                             <th>Name</th>
@@ -76,28 +91,46 @@ const AllUsers = () => {
                         </tr>
                     </thead>
                     <tbody>
-
-                        {
-                            users.map((user, index) => <tr key={user._id}>
+                        {users.map((user, index) => (
+                            <tr key={user._id}>
                                 <th>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>
-                                    {user.role === 'admin' ? 'Admin' : <button onClick={() => handleMakeAdmin(user)}
-                                        className="btn btn-lg bg-orange-500">
-                                        <FaUsers className="text-white text-2xl"></FaUsers>
-                                    </button>}
+                                    {user.role === 'admin' ? (
+                                        'Admin'
+                                    ) : (
+                                        <div>
+                                            <select
+                                                value={selectedRoles[user._id] || "user"}
+                                                onChange={(e) =>
+                                                    handleRoleChange(user._id, e.target.value)
+                                                }
+                                            >
+                                                <option value="user">User</option>
+                                                <option value="surveyor">Surveyor</option>
+                                                <option value="admin">Admin</option>
+                                                <option value="pro-user">Pro User</option>
+                                            </select>
+                                            <button
+                                                onClick={() => handleUpdateUser(user)}
+                                                className="btn btn-sm bg-pink-600"
+                                            >
+                                                <GrUpdate className="text-white text-2xl"></GrUpdate>
+                                            </button>
+                                        </div>
+                                    )}
                                 </td>
                                 <td>
-                                    <button onClick={() => handleDeleteUser(user)}
-                                        className="btn btn-ghost btn-lg">
+                                    <button
+                                        onClick={() => handleDeleteUser(user)}
+                                        className="btn btn-ghost btn-lg"
+                                    >
                                         <FaTrashAlt className="text-red-600 f"></FaTrashAlt>
                                     </button>
                                 </td>
-
-                            </tr>)
-                        }
-
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
