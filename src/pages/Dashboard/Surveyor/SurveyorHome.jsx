@@ -1,7 +1,7 @@
 import useAuth from "../../../hooks/useAuth";
 
 
-const UserHome = () => {
+const SurveyorHome = () => {
 
     const {user} = useAuth();
 
@@ -17,4 +17,4 @@ const UserHome = () => {
     );
 };
 
-export default UserHome;
+export default SurveyorHome;
