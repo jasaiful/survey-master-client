@@ -18,8 +18,6 @@ const NavBar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/surveys">Surveys</Link></li>
         <li><Link to="/surveyDetails">Survey Details</Link></li>
-
-        <li><Link to="/register">Register</Link></li>
         {
             user && isAdmin && <li><Link to="/dashboard/adminHome">Dashboard</Link></li>
         }
@@ -27,8 +25,10 @@ const NavBar = () => {
             user && !isAdmin && <li><Link to="/dashboard/userHome">Dashboard</Link></li>
         }
 
+        <li><Link to="/register">Register</Link></li>
+
         <li className="bg-gray-50 rounded-full text-black"><Link to="/prices">Upgrade to <span className="text-pink-600 font-bold text-lg">PRO</span></Link></li>
-        
+
     </>
 
     return (

@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
-import { FaHome, FaUserEdit } from "react-icons/fa";
+import { FaDollarSign, FaHome, FaUserEdit } from "react-icons/fa";
 import useProUser from "../hooks/useProUser";
 import useSurveyor from "../hooks/useSurveyor";
 
@@ -36,7 +36,7 @@ const Dashboard = () => {
                     {/* Pro user specific links */}
                     {isProUser && (
                         <>
-                           <li>
+                            <li>
                                 <NavLink to="/dashboard/proUserHome">
                                     <FaHome /> Pro-User Home
                                 </NavLink>
@@ -61,11 +61,18 @@ const Dashboard = () => {
 
                     {/* Default user links */}
                     {!isAdmin && !isProUser && !isSurveyor && (
-                        <li>
-                            <NavLink to="/dashboard/userHome">
-                                <FaHome /> User Home
-                            </NavLink>
-                        </li>
+                        <>
+                            <li>
+                                <NavLink to="/dashboard/userHome">
+                                    <FaHome /> User Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/payment">
+                                    <FaDollarSign /> Payment
+                                </NavLink>
+                            </li>
+                        </>
                     )}
 
                     {/* Shared nav links */}

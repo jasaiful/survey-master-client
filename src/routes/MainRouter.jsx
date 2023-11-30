@@ -18,6 +18,7 @@ import CreateSurvey from "../pages/Dashboard/Surveyor/CreateSurvey";
 import ProUserRoute from "./ProUserRoute";
 import ProUserHome from "../pages/Dashboard/ProUser/ProUserHome";
 import SurveyorRoute from "./SurveyorRoute";
+import Payment from "../pages/Dashboard/Users/Payment";
 
 
 const MainRouter = createBrowserRouter([
@@ -62,6 +63,10 @@ const MainRouter = createBrowserRouter([
             {
                 path: 'userHome',
                 element: <UserHome></UserHome>
+            },
+            {
+                path: 'payment',
+                element: <Payment></Payment>
             },
 
             //pro-user routes

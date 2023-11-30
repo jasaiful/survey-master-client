@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword, getAuth, signOut, onAuthStateChanged, s
 import { app } from "../firebase/firebase.config";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 
+
 export const AuthContext = createContext(null);
 
 const auth = getAuth(app);
@@ -12,6 +13,7 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     const axiosPublic = useAxiosPublic();
+    
 
     // create user
     const createUser = (email, password) => {
@@ -43,6 +45,26 @@ const AuthProvider = ({ children }) => {
             displayName: name, photoURL: photo
         });
     }
+
+
+    // update user information
+    const updateUser = async (userId, updatedData) => {
+        try {
+            const response = await axiosPublic.put(`/users/${userId}`, updatedData);
+            if (response.status === 200) {
+                const updatedUser = response.data;
+                setUser(updatedUser);
+                return updatedUser;
+            } else {
+
+                throw new Error('Failed to update user data');
+            }
+        } catch (error) {
+            console.error('Error updating user:', error);
+            throw error;
+        }
+    };
+
 
     // set current user
     useEffect(() => {
@@ -78,6 +100,7 @@ const AuthProvider = ({ children }) => {
         signIn,
         userSignOut,
         updateUserProfile,
+        updateUser,
         googleSignIn
     }
 
